@@ -1,0 +1,584 @@
+@font-face {
+    font-family: 'default';
+    src: url(fonts/LibreBaskerville-Regular.ttf);
+  }
+
+@font-face {
+    font-family: 'nadpis';
+    src: url(fonts/AquawaxMedium-trial.ttf);
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    font-family: "default";
+    background: #f2f2f2;
+  }
+
+  .top{
+    display: grid;
+    text-align: center;
+    font-family: "defalut";
+    color: #eff0f3;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+    padding: 1em;
+    background: #000000; 
+    background: -webkit-linear-gradient(to top, #434343, #000000); 
+    background: linear-gradient(to top, #434343, #000000);
+  }
+
+  header {
+    color: #1e1e24;
+    text-align: left;
+    font-size: 16px;
+    padding-top: 10px;   
+    margin-bottom: 50px;
+    font-family: "nadpis";
+    padding: 1%;
+    text-decoration: underline dashed #ffde3b 4px;
+  }
+
+  .container{
+    background-color: #ffffff;
+    height: auto;  
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    filter: none; 
+}
+
+  .nadpisy{
+    color: #1e1e24;
+    text-align: left;
+    font-family: "default";
+    margin-top: 4rem;
+    margin-left: 10%;
+    margin-bottom: 2rem;
+  }
+
+  .otazky{
+    color: #1e1e24;
+    font-size: 20px;
+    text-align: center;
+    font-family: "default";
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+  .otazky1{
+    color: #1e1e24;
+    font-size: 20px;
+    text-align: center;
+    font-family: "default";
+    margin-top: 10%;
+    margin-bottom: 5%;
+  }
+
+  hr{
+    margin-top: 5%;
+    border: 0.5px solid #858585;
+  }
+
+  .info{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: space-between;  
+  }
+
+.info input{
+  width: 100%;
+  height: 25px;
+  grid-template-columns: auto auto;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 3px solid #ffde3b;
+  outline: none; 
+  margin: 8px 0;
+}
+
+span.star {
+  color: red;
+}
+
+.telko{
+  display: grid;
+  grid-template-columns: 15% 85%;
+  border-bottom: 3px solid #ffde3b;
+  outline: none;
+  border: none;
+}
+
+.telko select{
+  outline: none;
+  border: none;
+  border-bottom: 3px solid #ffde3b;
+  margin: 8px 0;
+}
+
+.info label{
+  text-align: left;
+  margin-bottom: 10px;
+  display: block;
+}
+
+fieldset {
+  width: auto;
+  border: 0ch;
+  flex-direction: column;
+} 
+
+.gender{
+  background-color: #1e1e20;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 25px;
+  font-size: 1.2rem;
+  color: whitesmoke;
+  grid-template-columns: auto auto auto;
+  justify-items: center;
+  text-align: center;
+  display: inline-grid;
+  width: 50%;
+  padding: 0.4%;
+  border-radius: 10px;
+}
+
+.gender input {
+  max-width: 30px;
+  margin: 0px 4px -4px 0px;
+}
+
+.sports{
+  background-color: #1e1e20;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 25px;
+  font-size: 1.2rem;
+  color: whitesmoke;
+  grid-template-columns: auto auto auto;
+  justify-items: center;
+  text-align: center;
+  display: inline-grid;
+  width: 50%;
+  padding: 0.4%;
+  border-radius: 10px;
+}
+
+.sports_ot{
+  background-color: white;
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: black;
+  grid-template-columns: auto auto;
+  justify-items: center;
+  text-align: center;
+  display: inline-grid;
+  width: 20%;
+  padding: 0.2%;
+  border-radius: 10px;
+
+}
+
+.sports input {
+  max-width: 30px;
+  margin: 0px 4px -4px 0px;
+}
+
+.sports_ot input{
+  max-width: 30px;
+  margin: 0px 4px -4px 0px;
+}
+
+.sports p{
+  font-size: medium;
+  margin-top: 3px;
+}
+
+.textar{
+  margin-top: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+}
+
+.textar1{
+  margin-top: 2%;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+}
+
+.textar_ot{
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+}
+
+textarea{
+  max-width: 80%;
+  font-size: 1rem;
+  color: black;
+  background: #f2f2f2;
+  border: solid 2px #ffde3b;
+  text-align: center;
+  border-radius: 10px;
+  padding: 2%;
+}
+
+/*asi nemam už*/
+.textpozri{
+  max-width: 80%;
+  font-size: 1rem;
+  color: black;
+  background: #f2f2f2;
+  border: solid 2px #ffde3b;
+  text-align: center;
+  border-radius: 10px;
+
+}
+
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  padding: 6px;
+  background-clip: content-box;
+  border: 2px solid #bbbbbb;
+  background-color: #e7e6e7;
+  border-radius: 50%;
+}
+
+
+input[type="radio"]:checked {
+  background-color: #ffde3b;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+fieldset{
+  margin: 2%;
+  width: auto;
+  flex-direction: column;
+}
+
+
+.checkcontainer{
+  margin-top: 5%;
+  background-color: #1e1e20;
+  margin-left: 25%;
+  margin-right: 25%;
+  font-size: 1.3rem;
+  color: whitesmoke;
+  text-align: center;
+  display: inline-grid;
+  width: 50%;
+  padding: 0.4%;
+  border-radius: 10px;
+  font-family: 'defalut';
+}
+
+input[type=checkbox] {
+  transform: scale(1.4);
+  accent-color: #ffde3b;
+  font-size: 15px;
+}
+.textar6{
+  max-width: 80%;
+  font-size: 1rem;
+  color: black;
+  background: #f2f2f2;
+  border: solid 3px #ffde3b;
+  text-align: center;
+  border-radius: 10px;
+  margin-left: 20%;
+  margin-top: 2%;
+  width: 60%;
+  margin-bottom: 1%;
+  padding: 2%;
+}
+
+.hint{
+  color: red;
+  display: block;
+  font-size: medium;
+}
+.hint .active {
+  display: block;
+}
+
+.hintgender{
+  margin-top: 1%;
+  margin-left: 25%;
+  color: red;
+  display: block;
+  font-size: medium;
+
+}
+.vybersport{
+  margin-top: 5%;
+  background-color: #1e1e20;
+  margin-left: 25%;
+  margin-right: 25%;
+  font-size: 1.3rem;
+  color: whitesmoke;
+  text-align: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns:  auto auto auto;
+  width: 50%;
+  padding: 0.5%;
+  border-radius: 10px;
+  font-family: 'defalut';
+ 
+}
+.vybersport div{
+  margin-top: 3%;
+}
+.vybersport select{
+  margin-top: 7px;
+
+  background-color: #f2f2f2;
+  font-size: 1rem;
+  width: 80%;
+  color: black;
+  border-radius: 5px;
+  border: solid 3px #ffde3b;
+  text-align: center;
+  margin-bottom: 12px;
+}
+#boxas ,#muayas ,#mmaas{
+  font-size: medium;
+}
+
+/*Button meno*/
+.buttonhide{
+  width: 10%;
+  height: 40px;
+  border-radius: 7px;
+  background-color: #202020; 
+  color: white; 
+  margin-left: 45%;
+  margin-right: 45%;
+  margin-bottom: 1%;
+  font-family: 'default';
+}
+/* skryty text */
+.hidenbuton{  
+    color: black; 
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-bottom: 5%;
+    margin-top: 0;
+    font-size: 20px; 
+    align-items: center;
+    text-align: center;
+}
+.buttonhide:hover {
+  background-color: #ffde3b;
+  color: black;
+  border-radius: 7px;
+  border: none;
+}
+/*Odosielanie*/
+.button1 {
+    background-color: #202020; 
+    color: white; 
+    border: none;
+    font-size: x-large;
+    margin-top: 5%;
+    margin-left: 37.5%;
+    margin-right: 37.5%;
+    margin-bottom: 5%;
+    position: relative;
+    justify-content: center;
+    width: 25%;
+    padding: 10px;
+    text-align: center;  
+    font-family: "zaklad";   
+    font-size: small;
+    color: white;
+    background: #202020; 
+    border-radius: 10px;
+    font-size: x-large;
+}
+
+.button1:hover {
+  background-color: #ffde3b;
+  color: black;
+  border-radius: 10px;
+}
+
+footer{    
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  text-align: center;  
+  font-family: "zaklad";   
+  font-size: small;
+  color: white;
+  background: #202020;     
+}
+
+  @media screen and (max-width: 780px) {
+    .info {
+      width: auto;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .gender{
+      background-color: #1e1e20;
+      margin-left: 11%;
+      margin-right: 11%;
+      margin-top: 25px;
+      font-size: 1.2rem;
+      color: whitesmoke;
+      grid-template-columns: auto auto auto;
+      justify-items: center;
+      text-align: center;
+      align-items: center;
+      width: 78%;
+      padding: 0.4%;
+      border-radius: 10px;
+      
+    }
+    .hintgender{
+      margin-left: 11%;  
+    }
+    .sports{
+      background-color: #1e1e20;
+      margin-left: 11%;
+      margin-right: 11%;
+      margin-top: 25px;
+      font-size: 1.2rem;
+      color: whitesmoke;
+      grid-template-columns: auto auto auto;
+      justify-items: center;
+      text-align: center;
+      width: 78%;
+      padding: 0.4%;
+      border-radius: 10px;
+      display: block;
+    }
+  
+  .sports_ot {
+    background-color: white;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: black;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    text-align: center;
+    display: inline-grid;
+    width: 60%;
+    padding: 0.2%;
+    border-radius: 10px;
+}
+
+.textar {
+  margin-top: 15%;
+  margin-left: 1%;
+  margin-right: 1%;
+  text-align: center;
+}
+.textar1{
+  margin-top: 6%;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+}
+.checkcontainer{
+  margin-top: 5%;
+  background-color: #1e1e20;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 1.3rem;
+  color: whitesmoke;
+  text-align: center;
+  display: inline-grid;
+  width: 80%;
+  padding: 0.4%;
+  border-radius: 10px;
+  font-family: 'defalut';
+}
+.textar6 {
+  max-width: 90%;
+  font-size: 1rem;
+  color: black;
+  background: #f2f2f2;
+  border: solid 3px #ffde3b;
+  text-align: center;
+  border-radius: 10px;
+  margin-left: 5%;
+  margin-top: 2%;
+  width: 90%;
+  margin-bottom: 1%;
+  padding: 2%;
+}
+.vybersport{
+  margin-top: 5%;
+  background-color: #1e1e20;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 1.3rem;
+  color: whitesmoke;
+  text-align: center;
+  display: inline-grid;
+  width: 80%;
+  padding: 0.4%;
+  border-radius: 10px;
+  font-family: 'defalut';
+  grid-template-columns: none;
+ 
+}
+  }
+@media screen and (max-width: 530px) {
+.telko{
+  display: grid;
+  grid-template-columns: 20% 80%;
+  border-bottom: 3px solid #ffde3b;
+  outline: none;
+  border: none;
+}
+.container{
+  background-color: #ffffff;
+  height: auto;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  filter: none;
+
+}
+}
+
+@media screen and (max-width: 1392px) {
+  .telko{
+    display: grid;
+    grid-template-columns: 24% 76%;
+    border-bottom: 3px solid #ffde3b;
+    outline: none;
+    border: none;
+  }
+}
+

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Objednávka</title>
+
+</head>
+
+<body>
+    <header>
+        <h1>Radoslav Hajšo</h1>
+    </header>
+
+
+    <div class="container">
+
+        <div class="top">
+            <h1>Registrácia bojových športov</h1>
+        </div>
+
+        <div class="nadpisy">
+            <h2>Osobné údaje</h2>
+        </div>
+
+        <form id="form" method="post" enctype="multipart/form-data" onsubmit>
+            <!-- action="********" -->
+            <input type="hidden" value="Radoslav Hajšo" name="author">
+            <input type="hidden" name="apikey" value="********">
+            <input type="hidden" name="from" value="xhajso@stuba.sk">
+            <input type="hidden" name="to" value="feistu01@gmail.com">
+            <input type="hidden" name="sender" value="Radoslav Hajšo">
+            <input type="hidden" name="subject" value="Radoslav Hajšo Zadanie 2">
+            <input type="hidden" name="redirectOk" value="******">
+            <input type="hidden" name="redirectFalse" value="******">
+
+            <div class="info">
+                <fieldset>
+                    <label for="fname">Meno <span class="star">*</span></label>
+                    <input id="fname" type="text" name="Meno" value="" placeholder="Jožko"
+                        onchange="nameValidation(this)" required>
+                    <div class="hint">Povinné</div>
+                </fieldset>
+
+                <fieldset>
+                    <label for="lname">Priezvisko <span class="star">*</span></label>
+                    <input id="lname" type="text" name="Priezvisko" value="" placeholder="Mrkvička"
+                        onchange="nameValidation(this)" required>
+                    <div class="hint">Povinné</div>
+                </fieldset>
+
+                <fieldset>
+                    <label for="datebirth">Dátum narodenia <span class="star">*</span></label>
+                    <input type="date" id="datebirth" name="Dátum narodenia" onclick="maxDate()"
+                        onchange="calculateDate()" required>
+                    <div class="hint hintdate">Povinné</div>
+                </fieldset>
+
+                <fieldset>
+                    <label for="age">Vek <span class="star">*</span></label>
+                    <input type="number" id="age" name="Vek" placeholder="Váš vek" value readonly>
+                    <div class="hint">Povinné</div>
+                </fieldset>
+
+                <fieldset>
+                    <label for="email">Email <span class="star">*</span></label>
+                    <input type="text" id="email" name="Email" placeholder="abc@gmail.com"
+                        pattern="^[a-zA-Z0-9.+-]{3,}@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*\.[a-zA-Z]{2,4}$"
+                        onchange="emailValidation(this)" required>
+                    <div class="hint">Povinné</div>
+                </fieldset>
+
+                <fieldset>
+                    <label for="telc"> Tel.č <span class="star">*</span></label>
+                    <div class="telko">
+                        <select name="Predvolba" id="country" onchange="predValidation(this)">
+                            <option id="nothing" value="Vyber">+</option>
+                            <option value="sk">+421</option>
+                            <option value="cz">+420</option>
+                            <option value="uk">+44</option>
+                        </select>
+                        <input type="tel" id="telc" name="Tel.č" placeholder="916783457"
+                            onchange="phoneValidation(this)" maxlength="10" required
+                            pattern="[0-9]{3}[0-9]{3}[0-9]{3,3}$">
+                    </div>
+                    <div class="hint">Povinné</div>
+                </fieldset>
+            </div>
+
+            <div class="genderval">
+                <div class="gender" id="all" onchange="genderValidation()">
+                    <fieldset>
+                        <input type="radio" class="radio" name="Pohlavie" value="Muž" id="man" required>
+                        <label for="man">Muž</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <input type="radio" class="radio" name="Pohlavie" value="Žena" id="woman" required>
+                        <label for="woman">Žena</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <input type="radio" class="radio" name="Pohlavie" value="Iné" id="other" required>
+                        <label for="other">Iné</label>
+                    </fieldset>
+                </div>
+                <div class="hintgender">Povinné</div>
+            </div>
+
+            <hr>
+            <h2 class="otazky">Máte skusenosti s bojovými športmi?</h2>
+            <div class="sports_ot">
+                <fieldset>
+                    <label for="ano">
+                        <input type="radio" name="Skúsenosti" value="Áno" id="ano">Áno
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <label for="nie">
+                        <input type="radio" name="Skúsenosti" value="Nie" id="nie">Nie
+                    </label>
+                </fieldset>
+            </div>
+            <div class="textar1" id="dotexta" hidden>
+                <textarea name="Aké skúsenosti" id="fixtexta" cols="32" rows="5"
+                    placeholder="Napíšte nám prosím vás aké "></textarea>
+            </div>
+
+            <div class="nadpisy">
+                <h2>Výber športu</h2>
+            </div>
+
+            <fieldset class="vybersport">
+                <div>
+                    <label for="spt">Šport</label>
+                    <br>
+                    <select name="Šport" id="spt" onchange="genreSport(this.value)">
+                        <option value="BOX">BOX</option>
+                        <option value="MUAY THAI">MUAY THAI</option>
+                        <option value="MMA">MMA</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="trn">Tréner</label>
+                    <br>
+                    <select name="Tréner" id="trn" onchange="casCha(this.value)">
+                        <option class="trener1" value="Ján Franek">.</option>
+                        <option class="trener2" value="Július Torma">.</option>
+
+                    </select>
+                </div>
+                <div>
+                    <label for="dnc">Deň-čas</label>
+                    <br>
+                    <select name="Deň-čas" id="dnc">
+                        <option class="dencas1" value="Po-St-13:00">.</option>
+                        <option class="dencas2" value="Po-Pi-15:00">.</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <div class="nadpisy">
+                <h2>Cenník</h2>
+            </div>
+
+            <div class="sports">
+                <fieldset>
+                    <label for="1mesiac">
+                        <input type="radio" name="Pernamentka" value="30€" id="1mesiac" onclick="sportChange(this)">1
+                        Mesiac
+                    </label>
+                    <br>
+                    <label for="1mesiac" id="boxas">Cena: 30€</label>
+                </fieldset>
+
+                <fieldset>
+                    <label for="3mesiace">
+                        <input type="radio" name="Pernamentka" value="70€" id="3mesiace" onclick="sportChange(this)">3
+                        Mesiace
+                    </label>
+                    <br>
+                    <label for="3mesiace" id="muayas">Cena: 70€</label>
+                </fieldset>
+
+                <fieldset>
+                    <label for="6mesiacov">
+                        <input type="radio" name="Pernamentka" value="120€" id="6mesiacov" onclick="sportChange(this)">6
+                        Mesiacov
+                    </label>
+                    <br>
+                    <label for="6mesiacov" id="mmaas">Cena: 120€</label>
+                </fieldset>
+            </div>
+
+            <hr>
+            <h2 class="otazky">Máte vlastné pomôcky ?</h2>
+
+            <div class="checkcontainer">
+                <fieldset>
+                    <input type="checkbox" id="chc1" name="Má1" value="Bandáže">
+                    <label for="chc1"> Mám bandže</label><br>
+
+                    <input type="checkbox" id="chc2" name="Má2" value="Mma rukavice">
+                    <label for="chc2"> Mám MMA rukavice</label><br>
+
+                    <input type="checkbox" id="chc3" name="Má3" value="Box rukavice">
+                    <label for="chc3"> Mám BOX rukavice</label><br>
+
+                    <input type="checkbox" id="chc4" onclick="showTexter()" name="Vlatné pomôcky" value="Áno">
+                    <label for="chc4"> Iné</label><br>
+
+                    <textarea name="Aké vlastné" class="textar6" id="intext" cols="32" rows="5"
+                        placeholder="Napíšte nám prosím vás aké " hidden></textarea>
+                </fieldset>
+            </div>
+
+            <h2 class="otazky1">Máte nejké otázky ?</h2>
+
+            <div class="textar">
+                <textarea cols="100" rows="15" name="Dotazy"
+                    placeholder="Ako vám môžeme pomôcť ? V Prípade špecialných požiadaviek nám napíšte."></textarea>
+            </div>
+
+            <div class="send">
+                <button class="button button1" type="submit">Odoslať</button>
+            </div>
+        </form>
+
+        <button class="buttonhide" onclick="showName()">Kuk</button>
+        <div class="hidenbuton" id="hidenbuton" hidden>Radoslav Hajšo</div>
+
+    </div>
+
+    <footer>
+        Radoslav Hajšo &copy; 2022
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
